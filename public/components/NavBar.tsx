@@ -2,23 +2,24 @@ import React from 'react'
 
 function NavBar() {
   return (
-    <nav className='flex items-center fixed w-full justify-around py-10 top-0  text-xl dark:text-white'>
+    <nav className='fixed top-0 w-full z-50'>
+      <div className='max-w-6xl mx-auto px-6 py-6 flex items-center justify-between text-xl dark:text-white'>
 
-    {/*Logo*/}
-    <h1 className='flex font-semibold text-[#272727] dark:text-white text-3xl'>thilina.<h1 className='text-[#5A92FA]'>dev</h1></h1>
- 
-   {/*buttton*/}
-    <ul className='flex gap-x-6 dark:bg-[#111111] py-3 px-10 text-white bg-[#3A4C60] border dark:border-[#848484] rounded-full'>
-    <li className='hover:cursor-pointer'>Home</li>
-    <li className='hover:cursor-pointer'>Projects</li>
-    <li className='hover:cursor-pointer'>About</li>
-    <li className='hover:cursor-pointer'>Contact me</li>
-    </ul>
-   
+        {/* Logo */}
+        <h1 className='font-semibold text-3xl text-[#272727] dark:text-white'>
+          thilina.<span className='text-[#5A92FA]'>dev</span>
+        </h1>
 
+        {/* Buttons */}
+        <ul className='flex gap-x-6 bg-[#4075b1] dark:bg-[#111111] dark:border-[#848484] border rounded-full py-3 px-10 text-white'>
+          <li className='cursor-pointer'>Home</li>
+          <li className='cursor-pointer'>Projects</li>
+          <li className='cursor-pointer'>About</li>
+          <li className='cursor-pointer'>Contact me</li>
+        </ul>
 
+      </div>
     </nav>
-      
   )
 }
 
