@@ -5,8 +5,8 @@ export default function Home() {
   return (
 
 
-    <div className="flex  items-center justify-center  font-sans bg-[#ebe8e8] dark:bg-[#0B0B0B]">
-    <Homee/>  
+    <div className="flex flex-col  items-center justify-center  font-sans bg-[#ebe8e8] dark:bg-[#0B0B0B]">
+    <Homee/> 
     </div>
   );
 }

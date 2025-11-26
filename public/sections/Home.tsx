@@ -7,21 +7,22 @@ import R from "../Images/R.gif"
 
 function Home() {
   return (
-    <div className='max-w-6xl py-50 items-center gap-y-15 flex flex-col  mx-auto px-6   min-h-screen max-h-screen'>
-    <div className='  flex  items-center gap-x-15  '>
+    <div className='sm:max-w-6xl mt-20 sm:mt-0 sm:py-50 items-center justify-center gap-y-15 flex flex-col  sm:mx-auto px-6   sm:min-h-screen sm:max-h-screen'>
+    <div className='  sm:flex flex-col sm:flex-row   items-center sm:gap-x-15  '>
 
     {/**top section */}    
-    <div className='flex flex-col gap-y-10 flex-1  items-center h-full bg-[#ffffff]  dark:bg-[#181818] p-6    rounded-2xl '>
-    <Image src={Me} alt='A handsome photograph of the fabulous Thilina Dewmina.'  className=' w-60 h-65 rounded-2xl  object-cover'/>
-    
-     <div className=" flex flex-col gap-y-7 rounded-xl text-lg w-full   ">
+    <div className='flex flex-col gap-y-10 flex-1   items-center sm:h-full sm:bg-[#ffffff]  sm:dark:bg-[#181818] sm:p-6   rounded-2xl '>
+    <Image src={Me} alt='A handsome photograph of the fabulous Thilina Dewmina.'  className='z-50 w-35 h-35  sm:w-60 sm:h-65 border-gray-600 sm:border-0 border-2 rounded-full sm:rounded-2xl   object-cover'/>
+    <Image src={R} alt='gif' className='absolute block top-0 sm:hidden max-h-40 max-w-full sm:max-h-70 object-cover '/>
+
+    <div className=" hidden  items-center sm:items-start sm:flex sm:flex-col gap-y-7 rounded-xl sm:text-lg sm:w-full   ">
   {Object.values(homevalues.items).map((item: any, index: number) => {
     const Icon = item.icon;
     return (
       <a
         key={index}
         href={item.link}
-        className="flex items-center gap-3   hover:opacity-80 transition"
+        className="flex items-center gap-3  px-4 ms:px-0 hover:opacity-80 transition"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -39,14 +40,13 @@ function Home() {
     <div className='flex flex-col gap-y-15 items-center  '>
 
 <div className='flex flex-col gap-y-10'>
-    <h1 className='text-6xl bg-gradient-to-r from-[#284363] to-[#246CBF] dark:from-[#AAC2DD] dark:to-[#246CBF] bg-clip-text text-transparent'> {homevalues.title}</h1>
-    <h1 className='text-xl'>{homevalues.p}</h1>    
+    <h1 className='sm:text-6xl bg-gradient-to-r from-[#284363] to-[#246CBF] dark:from-[#AAC2DD] dark:to-[#246CBF] bg-clip-text text-transparent'> {homevalues.title}</h1>
+    <h1 className='sm:text-xl'>{homevalues.p}</h1>    
     </div>
 
 
 
 
-       {/** contact */}    
     
 
 
@@ -54,7 +54,7 @@ function Home() {
 
 <div className='flex flex-col gap-y-10 items-stretch  justify-between '>
 {/**image */}
-<Image src={R} alt='gif' className='max-h-70 object-cover rounded-xl'/>
+<Image src={R} alt='gif' className=' hidden sm:block  max-h-30 max-w-full sm:max-h-70 object-cover rounded-xl'/>
 
 {/** buttons */}
 <div className='flex gap-x-5'>
@@ -72,31 +72,19 @@ className='border-2 border-l-[#4872a7] border-r-[#214e7e] border-t-[#4872a7] bor
 
 </div>
 
-<div className="relative w-full overflow-hidden pb-10">
+<div className="relative sm:w-full max-w-110  sm:max-w-full  overflow-hidden pb-10">
     <div
-        className="flex gap-x-10 dark:text-gray-300 animate-scroll-x"
-        style={{
-            minWidth: "max-content",
-            animation: "scroll-x 20s linear infinite"
-        }}
+        className="flex sm:gap-x-10 gap-x-5 dark:text-gray-300 animate-scroll-x"
+      
     >
         {[...skills.skills, ...skills.skills].map((skill: any, index: number) => (
             <div key={index} className="flex items-center gap-x-2">
-                <p>{skill.name}</p>
+                <p className='hidden sm:flex'>{skill.name}</p>
                 <skill.icon size={25} />
             </div>
         ))}
     </div>
-    <style jsx>{`
-        @keyframes scroll-x {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-50%);
-            }
-        }
-    `}</style>
+
 </div>
 
 
