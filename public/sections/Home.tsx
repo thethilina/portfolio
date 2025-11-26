@@ -7,11 +7,11 @@ import R from "../Images/R.gif"
 
 function Home() {
   return (
-    <div className='sm:max-w-6xl mt-20 sm:mt-0 sm:py-50 items-center justify-center gap-y-15 flex flex-col  sm:mx-auto px-6   sm:min-h-screen sm:max-h-screen'>
+    <div className='sm:max-w-6xl mt-20 sm:mt-0 sm:py-40 items-center justify-center gap-y-25 flex flex-col  sm:mx-auto px-6   sm:min-h-screen sm:max-h-screen'>
     <div className='  sm:flex flex-col sm:flex-row   items-center sm:gap-x-15  '>
 
     {/**top section */}    
-    <div className='flex flex-col gap-y-10 flex-1   items-center sm:h-full sm:bg-[#ffffff]  sm:dark:bg-[#181818] sm:p-6   rounded-2xl '>
+    <div className='flex flex-col gap-y-10 flex-1   items-center sm:h-full sm:bg-[#f1f1f1]  sm:dark:bg-[#181818] sm:p-6   rounded-2xl '>
     <Image src={Me} alt='A handsome photograph of the fabulous Thilina Dewmina.'  className='z-50 w-35 h-35  sm:w-60 sm:h-65 border-gray-600 sm:border-0 border-2 rounded-full sm:rounded-2xl   object-cover'/>
     <Image src={R} alt='gif' className='absolute block top-0 sm:hidden max-h-40 max-w-full sm:max-h-70 object-cover '/>
 
@@ -39,7 +39,7 @@ function Home() {
     
     <div className='flex flex-col gap-y-15 items-center  '>
 
-<div className='flex flex-col gap-y-10'>
+    <div className='flex flex-col gap-y-10'>
     <h1 className='sm:text-6xl bg-gradient-to-r from-[#284363] to-[#246CBF] dark:from-[#AAC2DD] dark:to-[#246CBF] bg-clip-text text-transparent'> {homevalues.title}</h1>
     <h1 className='sm:text-xl'>{homevalues.p}</h1>    
     </div>
