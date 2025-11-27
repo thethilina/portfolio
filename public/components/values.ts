@@ -45,7 +45,13 @@ export const homevalues:any = {
     number:{value:"+94 78429 0997", icon:FaWhatsapp , link:"https://wa.me/94784290997" },
     email:{value:"thilinadewina7@gmail.com", icon:AiOutlineMail , link:"mailto:thilinadewina7@gmail.com" },
 
- }
+ },
+  items2:{
+    location:{value:"Galle, Sri Lanka", icon:GiSriLanka , link:"https://en.wikipedia.org/wiki/Galle" },
+    number:{value:"+94 78429 0997", icon:FaWhatsapp , link:"https://wa.me/94784290997" },
+    email:{value:"thilinadewina7@gmail.com", icon:AiOutlineMail , link:"mailto:thilinadewina7@gmail.com" },
+  
+ },
 
 
 }

@@ -7,14 +7,34 @@ import R from "../Images/R.gif"
 
 function Home() {
   return (
-    <div className='sm:max-w-6xl mt-20 sm:mt-0 sm:py-40 items-center justify-center gap-y-25 flex flex-col  sm:mx-auto px-6   sm:min-h-screen sm:max-h-screen'>
-    <div className='  sm:flex flex-col sm:flex-row   items-center sm:gap-x-15  '>
+    
+<div className='sm:max-w-6xl mt-20 sm:mt-0 sm:py-40 items-center justify-center gap-y-25 flex flex-col  sm:mx-auto px-6   sm:min-h-screen sm:max-h-screen'>
+      <div className='  sm:flex flex-col sm:flex-row  gap-y-5 flex   items-center sm:gap-x-15  '>
 
     {/**top section */}    
-    <div className='flex flex-col gap-y-10 flex-1   items-center sm:h-full sm:bg-[#f1f1f1]  sm:dark:bg-[#181818] sm:p-6   rounded-2xl '>
-    <Image src={Me} alt='A handsome photograph of the fabulous Thilina Dewmina.'  className='z-50 w-35 h-35  sm:w-60 sm:h-65 border-gray-600 sm:border-0 border-2 rounded-full sm:rounded-2xl   object-cover'/>
-    <Image src={R} alt='gif' className='absolute block top-0 sm:hidden max-h-40 max-w-full sm:max-h-70 object-cover '/>
-
+    <div className='flex  gap-y-10 flex-1    flex-row sm:flex-col   w-full gap-x-5   items-center sm:h-full sm:bg-[#f1f1f1]  sm:dark:bg-[#181818] sm:p-6   rounded-2xl '>
+    <Image src={Me} alt='A handsome photograph of the fabulous Thilina Dewmina.'  className='z-50 w-35 h-35  sm:w-60 sm:h-65  sm:border-0 border-2 rounded-xl sm:rounded-2xl   object-cover'/>
+    
+    {/** mobile thing */}
+    <div className='space-y-2'>
+    <h1 className=' text-xl bg-gradient-to-r from-[#284363] to-[#246CBF] sm:hidden dark:from-[#AAC2DD] dark:to-[#246CBF] bg-clip-text text-transparent'> {homevalues.title}</h1>
+     {Object.values(homevalues.items2).map((item: any, index: number) => {
+    const Icon = item.icon;
+    return (
+      <a
+        key={index}
+        href={item.link}
+        className="flex items-center sm:hidden gap-3 text-ms    ms:px-0 hover:opacity-80 transition"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Icon size={15} className="text-[#246CBF]"/>
+        <span>{item.value}</span>
+      </a>
+    );
+  })}
+    </div>
+    
     <div className=" hidden  items-center sm:items-start sm:flex sm:flex-col gap-y-7 rounded-xl sm:text-lg sm:w-full   ">
   {Object.values(homevalues.items).map((item: any, index: number) => {
     const Icon = item.icon;
@@ -40,7 +60,7 @@ function Home() {
     <div className='flex flex-col gap-y-15 items-center  '>
 
     <div className='flex flex-col gap-y-10'>
-    <h1 className='sm:text-6xl bg-gradient-to-r from-[#284363] to-[#246CBF] dark:from-[#AAC2DD] dark:to-[#246CBF] bg-clip-text text-transparent'> {homevalues.title}</h1>
+    <h1 className='sm:text-6xl bg-gradient-to-r hidden sm:block from-[#284363] to-[#246CBF] dark:from-[#AAC2DD] dark:to-[#246CBF] bg-clip-text text-transparent'> {homevalues.title}</h1>
     <h1 className='sm:text-xl'>{homevalues.p}</h1>    
     </div>
 
