@@ -96,7 +96,7 @@ className='border-2 border-l-[#4872a7] border-r-[#214e7e] border-t-[#4872a7] bor
 
 </div>
 
-<div className="relative sm:w-full w-full   sm:max-w-full  overflow-hidden pb-10">
+<div className="relative sm:w-full w-full   sm:max-w-full  overflow-hidden sm:pb-10">
     <div
         className="flex sm:gap-x-10 gap-x-5 dark:text-gray-300 animate-scroll-x"
       

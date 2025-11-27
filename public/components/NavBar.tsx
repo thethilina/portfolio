@@ -1,4 +1,5 @@
 import React from 'react'
+import { IoMdMenu } from "react-icons/io";
 
 function NavBar() {
   return (
@@ -17,6 +18,8 @@ function NavBar() {
           <li className='cursor-pointer'>About</li>
           <li className='cursor-pointer'>Contact me</li>
         </ul>
+        <IoMdMenu className='sm:hidden' />
+
 
       </div>
     </nav>

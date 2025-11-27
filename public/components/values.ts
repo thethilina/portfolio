@@ -51,7 +51,7 @@ export const homevalues:any = {
   items2:{
     location:{value:"Galle, Sri Lanka", icon:GiSriLanka , link:"https://en.wikipedia.org/wiki/Galle" },
     number:{value:"+94 78429 0997", icon:FaWhatsapp , link:"https://wa.me/94784290997" },
-    email:{value:"thilinadewina7@gmail.com", icon:AiOutlineMail , link:"mailto:thilinadewina7@gmail.com" },
+    github:{value:"thethilina", icon:FaGithub , link:"https://github.com/thethilina" },
   
  },
 
