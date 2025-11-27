@@ -33,6 +33,8 @@ export const homevalues:any = {
 
  title : "I’m Thilina Dewmina ",
  p : "an aspiring software engineer    passionate about clean design, reliable systems, and continuous learning. I’m working toward becoming a strong full-stack developer and building projects that actually matter.",
+  pmob : "an aspiring software engineer    passionate about clean design, reliable systems, and continuous learning.",
+
  about:"I’m Thilina Dewmina (21) Education & Background Pursuing a Top-Up Degree in Software Engineering at SLIIT City UniCompleted a Higher Diploma in Software Engineering & Computing at ICBT Colombo Campus. Finished A/Ls at Darmasoka College  Passion & FocusI’m passionate about game development and enjoy creating practical, user-friendly digital experiences grounded in solid software engineering principles." ,
  items:{
     location:{value:"Galle, Sri Lanka", icon:GiSriLanka , link:"https://en.wikipedia.org/wiki/Galle" },

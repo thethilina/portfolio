@@ -8,11 +8,11 @@ import R from "../Images/R.gif"
 function Home() {
   return (
     
-<div className='sm:max-w-6xl mt-20 sm:mt-0 sm:py-40 items-center justify-center gap-y-25 flex flex-col  sm:mx-auto px-6   sm:min-h-screen sm:max-h-screen'>
+<div className='sm:max-w-6xl mt-20 sm:mt-0 sm:py-40 items-center justify-center gap-y-10 sm:gap-y-25 flex flex-col  sm:mx-auto px-6   sm:min-h-screen sm:max-h-screen'>
       <div className='  sm:flex flex-col sm:flex-row  gap-y-5 flex   items-center sm:gap-x-15  '>
 
     {/**top section */}    
-    <div className='flex  gap-y-10 flex-1    flex-row sm:flex-col   w-full gap-x-5   items-center sm:h-full sm:bg-[#f1f1f1]  sm:dark:bg-[#181818] sm:p-6   rounded-2xl '>
+    <div className='flex  gap-y-10 flex-1    flex-row sm:flex-col  w-full gap-x-5   items-center  sm:h-full sm:bg-[#f1f1f1]  sm:dark:bg-[#181818] sm:p-6   rounded-2xl '>
     <Image src={Me} alt='A handsome photograph of the fabulous Thilina Dewmina.'  className='z-50 w-35 h-35  sm:w-60 sm:h-65  sm:border-0 border-2 rounded-xl sm:rounded-2xl   object-cover'/>
     
     {/** mobile thing */}
@@ -57,11 +57,13 @@ function Home() {
 
     {/** bottom */}
     
-    <div className='flex flex-col gap-y-15 items-center  '>
+    <div className='flex flex-col gap-y-5 sm:gap-y-15 items-center  '>
 
     <div className='flex flex-col gap-y-10'>
     <h1 className='sm:text-6xl bg-gradient-to-r hidden sm:block from-[#284363] to-[#246CBF] dark:from-[#AAC2DD] dark:to-[#246CBF] bg-clip-text text-transparent'> {homevalues.title}</h1>
-    <h1 className='sm:text-xl'>{homevalues.p}</h1>    
+    <h1 className='sm:text-xl hidden sm:block'>{homevalues.p}</h1>
+        <h1 className='sm:text-xl sm:hidden '>{homevalues.pmob}</h1>    
+    
     </div>
 
 
@@ -72,27 +74,29 @@ function Home() {
 
 
 
-<div className='flex flex-col gap-y-10 items-stretch  justify-between '>
+<div className='flex flex-col gap-y-10 min-w-full items-stretch  justify-between '>
 {/**image */}
 <Image src={R} alt='gif' className=' hidden sm:block  max-h-30 max-w-full sm:max-h-70 object-cover rounded-xl'/>
 
 {/** buttons */}
-<div className='flex gap-x-5'>
+<div className='flex gap-x-5 min-w-full max-w-full'>
 <input type='text' placeholder='Ask Anything About Me' 
 className='border-2 border-l-[#4872a7] border-r-[#214e7e] border-t-[#4872a7] border-b-[#214e7e]
- focus:border-[#4872a7]  dark:bg-[#121212] w-8/10  bg-[#e0dbdb] py-3 px-5 rounded-l-full rounded-b-full  p-3 outline-none '/>
-<button className='bg-gradient-to-r from-[#145299] to-[#246CBF] text-white py-3 px-5 w-3/10  rounded-r-full rounded-t-full '>Download Resume</button>
-</div>
+ focus:border-[#4872a7]  dark:bg-[#121212] sm:w-8/10  bg-[#e0dbdb] w-full py-1 px-2 sm:py-3 sm:px-5 rounded-l-full rounded-b-full  outline-none '/>
+<button className='bg-gradient-to-r from-[#145299] to-[#246CBF] py-1 px-2  text-white sm:py-3 sm:px-5 w-3/10  rounded-r-full rounded-t-full hidden sm:block '>Download Resume</button>
+<button className='bg-gradient-to-r from-[#145299] to-[#246CBF] py-1 px-2  text-white sm:py-3 sm:px-5 w-3/10 sm:w-full  rounded-r-full rounded-t-full  sm:hidden'> Resume</button>
 
 </div>
 
-
 </div>
 
 
 </div>
 
-<div className="relative sm:w-full max-w-110  sm:max-w-full  overflow-hidden pb-10">
+
+</div>
+
+<div className="relative sm:w-full w-full   sm:max-w-full  overflow-hidden pb-10">
     <div
         className="flex sm:gap-x-10 gap-x-5 dark:text-gray-300 animate-scroll-x"
       
