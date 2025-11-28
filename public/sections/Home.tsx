@@ -8,7 +8,7 @@ import R from "../Images/R.gif"
 function Home() {
   return (
     
-<div className='lg:max-w-6xl sm:max-w-6xl mt-20 lg:mt-0 sm:mt-0 lg:py-40 sm:py-30 items-center justify-center gap-y-10 lg:gap-y-25 sm:gap-y-25 flex flex-col  lg:mx-auto sm:mx-auto px-6   lg:min-h-screen lg:max-h-screen '>
+<div id="home" className='  lg:max-w-6xl sm:max-w-6xl mt-20 lg:mt-10 sm:mt-0 lg:py-40 sm:py-30 items-center justify-center gap-y-10 lg:gap-y-25 sm:gap-y-25 flex flex-col  lg:mx-auto sm:mx-auto px-6   lg:min-h-screen lg:max-h-screen '>
       <div className='  lg:flex sm:flex flex-col lg:flex-row sm:flex-row  gap-y-5 flex    items-center  lg:gap-x-15 sm:gap-x-5  '>
 
     {/**top section */}    

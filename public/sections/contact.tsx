@@ -6,7 +6,7 @@ function Contact() {
   return (
 
 
-<div className='sm:max-w-6xl mb-10 sm:mb-20 rounded-2xl mt-10 sm:mt-20 items-start    gap-y-15 flex flex-col  sm:mx-auto sm:px-6 px-5 '>
+<div id="contact" className='sm:max-w-6xl mb-10 sm:mb-20 rounded-2xl mt-10 sm:mt-20 items-start    gap-y-15 flex flex-col  sm:mx-auto sm:px-6 px-5 '>
 <div className='sm:bg-[#f1f1f1] sm:dark:bg-[#181818] rounded-2 w-full border flex  gap-y-10  border-[#7a7a7a] rounded-2xl p-7 sm:p-20  sm:flex flex-col sm:flex-row justify-between   items-center sm:gap-x-15 '>
 
 <div className='flex flex-col items-start  gap-y-5 sm:gap-y-10'>

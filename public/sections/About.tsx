@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 function About() {
   return (
-        <div className='sm:max-w-6xl mt-10 sm:mt-20  items-start gap-y-5 sm:gap-y-15 flex flex-col  sm:mx-auto sm:px-6 px-5 '>
+        <div id="about" className='sm:max-w-6xl mt-10 sm:mt-20  items-start gap-y-5 sm:gap-y-15 flex flex-col  sm:mx-auto sm:px-6 px-5 '>
 
         <h1 className='sm:text-5xl text-2xl bg-gradient-to-r from-[#284363] to-[#246CBF] dark:from-[#AAC2DD] dark:to-[#246CBF] bg-clip-text text-transparent'> About Me</h1>
     
