@@ -17,15 +17,16 @@ function About() {
     <p className=''>{homevalues.about}</p>
     </div>
 
-    <div className='flex gap-x-15 gap-y-10 items-center sm:flex-row flex-col  justify-between'>
+    <div className='flex gap-x-15 gap-y-10 items-center sm:flex-row flex-col sm:min-h-full     min-w-full justify-between'>
 
     {/**what i do */}
-    <div>
+    <div className='min-w-full  sm:min-h-full    sm:min-w-auto'>
     <h1 className='sm:text-4xl text-xl mb-5 bg-gradient-to-r from-[#284363] to-[#246CBF] dark:from-[#7bace4] dark:to-[#246CBF] bg-clip-text text-transparent'> What I Do</h1>
     <div className='grid grid-cols-2 gap-6 '>
     {whatido.map((item:any , index:number) => (
         <div key={index} className='flex flex-col gap-y-3 text-sm sm:text-lg p-4 items-center justify-center  rounded-xl  bg-[#f1f1f1] dark:bg-[#181818]  '>
-        <item.icon size={40} className="dark:text-[#bac0c7] text-[#2e2e2e]"/>
+              <item.icon size={40} className="dark:text-[#bac0c7] hidden lg:block text-[#141516]"/>
+        <item.icon size={30} className="dark:text-[#bac0c7] lg:hidden text-[#141516]"/>
         <h1 className=' font-semibold text-center'>{item.name}</h1>
         </div>
     ))}
@@ -33,14 +34,15 @@ function About() {
     </div>
 
 
-    <div>
+    <div className='min-w-full sm:min-w-auto sm:min-h-full  '>
     {/** skills */}
     <h1 className='sm:text-4xl text-xl mb-5 bg-gradient-to-r from-[#284363] to-[#246CBF] dark:from-[#78aeeb] dark:to-[#246CBF] bg-clip-text text-transparent'> Skills</h1>
-    <div className='grid grid-cols-3 sm:grid-cols-6 gap-6 rounded-xl    items-center  py-4 px-4 bg-[#f1f1f1] dark:bg-[#181818] '>
+    <div className='grid grid-cols-3 sm:grid-cols-6 gap-6 rounded-xl  min-w-full  items-center    py-4 px-4 bg-[#f1f1f1] dark:bg-[#181818] '>
     {skills.skills.map((item:any , index:number) => (
         <div key={index} className='flex flex-col gap-y-3 items-center p-4  '>
-        <item.icon size={40} className="dark:text-[#bac0c7] text-[#141516]"/>
-        <h1 className='text-center sm:text-lg'>{item.name}</h1>
+        <item.icon size={40} className="dark:text-[#bac0c7] hidden lg:block text-[#141516]"/>
+        <item.icon size={30} className="dark:text-[#bac0c7] lg:hidden text-[#141516]"/>
+        <h1 className='text-center  lg:text-lg'>{item.name}</h1>
         </div>
     ))}
     </div>
