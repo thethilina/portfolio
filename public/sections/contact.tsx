@@ -1,8 +1,30 @@
 import React from 'react'
 import {homevalues ,skills} from "../components/values"
-
+import { gsap } from "gsap";
+import { useGSAP } from '@gsap/react';
 
 function Contact() {
+
+  useGSAP(() => {
+    gsap.fromTo(
+      "#contact",
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0, 
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: "#contact",
+          start: "top 80%",
+          toggleActions: "play reverse play reverse",
+        },
+      }
+    );
+  }, []);
+
+
+
   return (
 
 

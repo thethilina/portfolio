@@ -1,6 +1,28 @@
 import React from 'react'
+import { gsap } from "gsap";
+import { useGSAP } from '@gsap/react';
 
 function Projects() {
+
+useGSAP(() => {
+  gsap.fromTo(
+    "#projects h1",
+    { opacity: 0, y: 50 },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: "#projects",
+        start: "top 80%",
+        toggleActions: "play reverse play reverse",
+      },
+    }
+  );
+}
+, []);
+
   return (
     <div id="projects" className='sm:max-w-6xl mt-20 lg:mt-0  sm:mt-0 items-start gap-y-5 sm:gap-y-15 flex flex-col  sm:mx-auto sm:px-6 px-5  '>
 

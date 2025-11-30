@@ -2,9 +2,35 @@ import React from 'react'
 import me2 from "../Images/me2.png"
 import {homevalues ,skills ,whatido} from "../components/values"
 import Image from 'next/image'
-
+import { gsap } from "gsap";
+import { useGSAP } from '@gsap/react';
 
 function About() {
+
+  useGSAP(() => { 
+    gsap.fromTo(
+      "#about h1",
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: "#about",
+          start: "top 80%",
+          toggleActions: "play reverse play reverse",
+        },
+      }
+    );
+  }, []);
+
+
+
+
+
+
+
   return (
         <div id="about" className='sm:max-w-6xl mt-10 sm:mt-20  items-start gap-y-5 sm:gap-y-15 flex flex-col  sm:mx-auto sm:px-6 px-5 '>
 
@@ -27,7 +53,7 @@ function About() {
         <div key={index} className='flex flex-col gap-y-3 text-sm sm:text-lg p-4 items-center justify-center  rounded-xl  bg-[#f1f1f1] dark:bg-[#181818]  '>
               <item.icon size={40} className="dark:text-[#bac0c7] hidden lg:block text-[#141516]"/>
         <item.icon size={30} className="dark:text-[#bac0c7] lg:hidden text-[#141516]"/>
-        <h1 className=' font-semibold text-center'>{item.name}</h1>
+        <h1 className=' text-center'>{item.name}</h1>
         </div>
     ))}
     </div>
