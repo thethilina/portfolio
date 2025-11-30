@@ -58,6 +58,8 @@ export const homevalues:any = {
 
 }
 
+const x:any =12
+
 export const  skills:any = {
 
 skills:[
