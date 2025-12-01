@@ -17,7 +17,6 @@ function Contact() {
         scrollTrigger: {
           trigger: "#contact",
           start: "top 80%",
-          toggleActions: "play reverse play reverse",
         },
       }
     );

@@ -9,7 +9,7 @@ function About() {
 
   useGSAP(() => { 
     gsap.fromTo(
-      "#about h1",
+      "#about",
       { opacity: 0, y: 50 },
       {
         opacity: 1,
@@ -19,7 +19,7 @@ function About() {
         scrollTrigger: {
           trigger: "#about",
           start: "top 80%",
-          toggleActions: "play reverse play reverse",
+        
         },
       }
     );

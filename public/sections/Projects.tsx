@@ -6,7 +6,7 @@ function Projects() {
 
 useGSAP(() => {
   gsap.fromTo(
-    "#projects h1",
+    "#projects",
     { opacity: 0, y: 50 },
     {
       opacity: 1,
@@ -16,7 +16,7 @@ useGSAP(() => {
       scrollTrigger: {
         trigger: "#projects",
         start: "top 80%",
-        toggleActions: "play reverse play reverse",
+       
       },
     }
   );
@@ -24,7 +24,7 @@ useGSAP(() => {
 , []);
 
   return (
-    <div id="projects" className='sm:max-w-6xl mt-20 lg:mt-0  sm:mt-0 items-start gap-y-5 sm:gap-y-15 flex flex-col  sm:mx-auto sm:px-6 px-5  '>
+    <div id="projects" className='sm:max-w-6xl mt-5 lg:mt-0  sm:mt-0 items-start gap-y-5 sm:gap-y-15 flex flex-col  sm:mx-auto sm:px-6 px-5  '>
 
         <h1 className='sm:text-5xl text-2xl bg-gradient-to-r from-[#284363] to-[#246CBF] dark:from-[#AAC2DD] dark:to-[#246CBF] bg-clip-text text-transparent'> Projects</h1>
     

@@ -37,7 +37,7 @@ function Home() {
   useGSAP(() => {
     gsap.fromTo(
       "#top",
-      { opacity: 0, x: -100 },
+      { opacity: 0, x: -50 },
       {
         opacity: 1,
         x: 0,
@@ -47,14 +47,13 @@ function Home() {
         scrollTrigger: {
           trigger: "#top",
           start: "top 80%",
-          toggleActions: "play reverse play reverse",
         },
       }
     );
 
     gsap.fromTo(
       "#bottom",
-      { opacity: 0, x: 100 },
+      { opacity: 0, x: 50 },
       {
         opacity: 1,
         x: 0,
@@ -64,7 +63,6 @@ function Home() {
         scrollTrigger: {
           trigger: "#top",
           start: "top 80%",
-          toggleActions: "play reverse play reverse",
         },
       }
     );
