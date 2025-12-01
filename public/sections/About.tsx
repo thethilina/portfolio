@@ -7,23 +7,6 @@ import { useGSAP } from '@gsap/react';
 
 function About() {
 
-  useGSAP(() => { 
-    gsap.fromTo(
-      "#about",
-      { opacity: 0.5, y: 50 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: "#about",
-          start: "top 80%",
-        
-        },
-      }
-    );
-  }, []);
 
 
 

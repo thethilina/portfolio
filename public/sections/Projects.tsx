@@ -4,24 +4,7 @@ import { useGSAP } from '@gsap/react';
 
 function Projects() {
 
-useGSAP(() => {
-  gsap.fromTo(
-    "#projects",
-    { opacity: 0.5, y: 50 },
-    {
-      opacity: 1,
-      y: 0,
-      duration: 1,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: "#projects",
-        start: "top 80%",
-       
-      },
-    }
-  );
-}
-, []);
+
 
   return (
     <div id="projects" className='sm:max-w-6xl mt-5 lg:mt-0  sm:mt-0 items-start gap-y-5 sm:gap-y-15 flex flex-col  sm:mx-auto sm:px-6 px-5  '>
