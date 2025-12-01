@@ -10,7 +10,7 @@ function About() {
   useGSAP(() => { 
     gsap.fromTo(
       "#about",
-      { opacity: 0, y: 50 },
+      { opacity: 0.5, y: 50 },
       {
         opacity: 1,
         y: 0,
