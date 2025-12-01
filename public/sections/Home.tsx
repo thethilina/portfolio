@@ -34,39 +34,7 @@ function Home() {
 
   }, []);
 
-  useGSAP(() => {
-    gsap.fromTo(
-      "#top",
-      { opacity: 0, x: -50 },
-      {
-        opacity: 1,
-        x: 0,
-        duration: 1,
-        ease: "power2.out",
-        stagger: { amount: 0.3 },
-        scrollTrigger: {
-          trigger: "#top",
-          start: "top 80%",
-        },
-      }
-    );
-
-    gsap.fromTo(
-      "#bottom",
-      { opacity: 0, x: 50 },
-      {
-        opacity: 1,
-        x: 0,
-        duration: 1,
-        ease: "power2.out",
-        stagger: { amount: 0.3 },
-        scrollTrigger: {
-          trigger: "#top",
-          start: "top 80%",
-        },
-      }
-    );
-  }, []);
+ 
 
   return (
     <div id="home" className='lg:max-w-6xl sm:max-w-6xl mt-20 lg:mt-10 sm:mt-0 lg:py-40 sm:py-30 items-center justify-center gap-y-10 lg:gap-y-25 sm:gap-y-25 flex flex-col lg:mx-auto sm:mx-auto px-6 lg:min-h-screen lg:max-h-screen'>
