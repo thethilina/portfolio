@@ -37,7 +37,7 @@ function Home() {
  
 
   return (
-    <div id="home" className='lg:max-w-6xl sm:max-w-6xl mt-20 lg:mt-10 sm:mt-0 lg:py-40 sm:py-30 items-center justify-center gap-y-10 lg:gap-y-25 sm:gap-y-25 flex flex-col lg:mx-auto sm:mx-auto px-6 lg:min-h-screen lg:max-h-screen'>
+    <div id="home" className='lg:max-w-6xl sm:max-w-6xl mt-20 lg:mt-10 sm:mt-0 lg:py- sm:py-30 items-center justify-center gap-y-10 lg:gap-y-10 sm:gap-y-25 flex flex-col lg:mx-auto sm:mx-auto px-6 '>
       <div className='lg:flex sm:flex flex-col lg:flex-row sm:flex-row gap-y-5 flex items-center lg:gap-x-15 sm:gap-x-5'>
         
         <div id='top' className='flex lg:gap-y-10 sm:gap-y-6 flex-1 flex-row lg:flex-col sm:flex-col lg:w-full sm:w-full gap-x-5 sm:py-6 items-center lg:h-full sm:h-full lg:bg-[#f1f1f1] sm:bg-[#f1f1f1] lg:dark:bg-[#181818] sm:dark:bg-[#181818] lg:p-6 rounded-2xl'>

@@ -17,15 +17,7 @@ export let smoother:any;
 
 export default function Home() {
 
-  useGSAP(() => {
-   smoother = ScrollSmoother.create({
-      wrapper: "#smooth-wrapper",
-      content: "#smooth-content",
-      smooth:0.5,
-      effects: true,
-    });
-  }, []); 
-      
+
 
 
 
@@ -38,7 +30,6 @@ export default function Home() {
     <Projects/>
     <About/> 
     <Contact/>
-    <div className="w-2 h-10" />
     </div>
     </div>
   );

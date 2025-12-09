@@ -9,7 +9,6 @@ import { useRef } from 'react';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { smoother } from '@/app/page';
 
-gsap.registerPlugin(ScrollTrigger);
 
 
 
@@ -39,26 +38,28 @@ const [isOpen, setIsOpen] = useState(false);
 
         {/* Buttons */}
         <ul className='lg:flex hidden gap-x-6 bg-[#4075b1] dark:bg-[#111111] dark:border-[#848484] border rounded-full py-2 px-10 text-white'>
-            <li onClick={()=>{smoother.scrollTo("#home" , true , "top center")}} className='cursor-pointer'>Home</li>
-            <li onClick={()=>{smoother.scrollTo("#projects", true , "center center")}} className='cursor-pointer'>Projects</li>
-            <li onClick={()=>{smoother.scrollTo("#about", true , "center center")}} className='cursor-pointer'>About</li>
-            <li onClick={()=>{smoother.scrollTo("#contact", true , "center center")}} className='cursor-pointer'>Contact me</li>
+            <li className='cursor-pointer'><a href="#home">Home</a></li>
+            <li className='cursor-pointer'><a href="#projects">Projects</a></li>
+            <li className='cursor-pointer'><a href="#about">About</a></li>
+            <li className='cursor-pointer'><a href="#contact">Contact me</a></li>
         </ul>
-        {isOpen?<IoCloseSharp onClick={()=>{isOpen?setIsOpen(false):setIsOpen(true)}} className='lg:hidden z-100' /> : <IoMdMenu onClick={()=>{isOpen?setIsOpen(false):setIsOpen(true)}} className='lg:hidden z-100' />}
+        {isOpen ? (
+          <IoCloseSharp onClick={() => setIsOpen(false)} className='lg:hidden z-100' />
+        ) : (
+          <IoMdMenu onClick={() => setIsOpen(true)} className='lg:hidden z-100' />
+        )}
 
-
-      {isOpen &&
+            {isOpen &&
         <ul className=' fixed w-screen h-screen items-center backdrop-blur-sm  justify-center  flex flex-col gap-y-4 bg-[#4075b1] dark:bg-[#111111]/95  py-4 px-10 text-white top-0 right-0'>
-              <li onClick={()=>{smoother.scrollTo("#home" , true , "top center"); setIsOpen(false)}} className='cursor-pointer'>Home</li>
-              <li onClick={()=>{smoother.scrollTo("#projects", true , "center center"); setIsOpen(false)}} className='cursor-pointer'>Projects</li>
-              <li onClick={()=>{smoother.scrollTo("#about", true , "top center"); setIsOpen(false)}} className='cursor-pointer'>About</li>
-              <li onClick={()=>{smoother.scrollTo("#contact", true , "center center"); setIsOpen(false)}} className='cursor-pointer'>Contact me</li>
+              <li className='cursor-pointer'><a href="#home" onClick={()=>setIsOpen(false)}>Home</a></li>
+              <li className='cursor-pointer'><a href="#projects" onClick={()=>setIsOpen(false)}>Projects</a></li>
+              <li className='cursor-pointer'><a href="#about" onClick={()=>setIsOpen(false)}>About</a></li>
+              <li className='cursor-pointer'><a href="#contact" onClick={()=>setIsOpen(false)}>Contact me</a></li>
         </ul>
-      }
-
+            }
+      
       </div>
     </nav>
   )
 }
-
-export default NavBar
+export default NavBar;
