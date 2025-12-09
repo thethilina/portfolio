@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
+    "cloudinary": "^2.8.0",
     "gsap": "^3.13.0",
     "mongoose": "^9.0.1",
     "next": "^16.0.8",
