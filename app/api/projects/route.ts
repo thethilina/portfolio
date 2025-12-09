@@ -53,47 +53,19 @@ export async function POST(request: NextRequest) {
 
 export async function GET(request: NextRequest) {
   try {
-    const { searchParams } = new URL(request.url);
+   
 
-    const category = searchParams.get("category");
-    const type = searchParams.get("type"); 
-    const tech = searchParams.get("tech");
-    const search = searchParams.get("search");
-    const page = parseInt(searchParams.get("page") || "1");
-    const limit = parseInt(searchParams.get("limit") || "10");
 
-    let query: any = {};
-
-    if (category) query.category = category;
-    if (type) query.type = type;
-    if (tech) query.techs = tech;
-    if (search) {
-      query.$or = [
-        { projectName: { $regex: search, $options: "i" } },
-        { projectDes: { $regex: search, $options: "i" } },
-      ];
-    }
-
-    const skip = (page - 1) * limit;
     await connect();
-    const [projects, total] = await Promise.all([
-      Project.find(query)
-        .sort({ createdAt: -1 })
-        .skip(skip)
-        .limit(limit)
-        .lean(),
-      Project.countDocuments(query),
-    ]);
 
-    return NextResponse.json({
-      projects,
-      pagination: {
-        page,
-        limit,
-        total,
-        totalPages: Math.ceil(total / limit),
-      },
-    });
+    const projects = await Project.find()
+
+    return NextResponse.json({ projects }, { status: 200 });
+
+
+ 
+
+
   } catch (error: any) {
     return NextResponse.json(
       { error: error.message || "Failed to fetch projects" },
@@ -101,5 +73,4 @@ export async function GET(request: NextRequest) {
     );
   }
 }
-
 

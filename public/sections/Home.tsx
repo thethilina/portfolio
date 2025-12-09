@@ -89,12 +89,16 @@ function Home() {
                 placeholder='Ask Anything About Me'
                 className='border-2 border-l-[#4872a7] border-r-[#214e7e] border-t-[#4872a7] border-b-[#214e7e] focus:border-[#4872a7] dark:bg-[#121212] lg:w-8/10 sm:w-8/10 bg-[#e0dbdb] w-full py-1 px-2 lg:py-3 lg:px-5 sm:py-3 sm:px-5 rounded-l-full rounded-b-full outline-none'
               />
-              <button className='bg-gradient-to-r from-[#145299] to-[#246CBF] py-1 px-2 text-white lg:py-3 lg:px-5 sm:py-2 sm:px-3 w-3/10 rounded-r-full rounded-t-full hidden lg:block'>
-                Download Resume
-              </button>
-              <button className='bg-gradient-to-r from-[#145299] to-[#246CBF] py-1 px-2 text-white lg:py-3 lg:px-5 sm:py-2 sm:px-3 w-3/10 lg:w-full rounded-r-full rounded-t-full lg:hidden'>
-                Resume
-              </button>
+              <a href="/Images/ThilinaDewminapdf.pdf"  className='bg-gradient-to-r from-[#145299] to-[#246CBF] py-1 px-2 text-white lg:py-3 lg:px-5 sm:py-2 sm:px-3 w-3/10 rounded-r-full rounded-t-full hidden lg:block'  download target="_blank" rel="noopener noreferrer">
+                
+                  Download Resume
+               
+              </a>
+              <a href="/Images/ThilinaDewminapdf.pdf" download target="_blank" rel="noopener noreferrer" className='bg-gradient-to-r from-[#145299] to-[#246CBF] py-1 px-2 text-white lg:py-3 lg:px-5 sm:py-2 sm:px-3 w-3/10 lg:w-full rounded-r-full rounded-t-full lg:hidden'>
+           
+                  Resume
+               
+              </a>
             </div>
           </div>
         </div>
